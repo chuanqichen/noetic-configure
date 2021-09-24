@@ -23,8 +23,7 @@ source ~/.bashrc
 echo "Check ROS_PACKAGE_PATH below (should be /home/aa274/catkin_ws/src:/opt/ros/noetic/share)"
 echo $ROS_PACKAGE_PATH
 echo "Installing VSCode..."
-sudo apt install software-properties-common apt-transport-https wget
-apt install software-properties-common apt-transport-https wget
+sudo apt install software-properties-common apt-transport-https wget -y
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo apt install code -y
