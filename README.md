@@ -1,7 +1,7 @@
 # CS237A ROS Setup on Ubuntu 20.04 LTS 
 
 ## Step 1: 
-- git clone https://github.com/chuanqichen/noetic-configure
+- git clone https://github.com/PrinciplesofRobotAutonomy/noetic-configure
 - chmod +x install_noetic_on_ubuntu20.sh
 - ./install_noetic_on_ubuntu20.sh
 
