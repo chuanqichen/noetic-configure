@@ -1,3 +1,28 @@
+#CS237A ROS Setup on Ubuntu 20.04 LTS 
+
+#Step 1: 
+https://github.com/chuanqichen/noetic-configure
+chmod +x install_noetic_on_ubuntu20.sh
+./install_noetic_on_ubuntu20.sh
+
+#Step 2: 
+sudo apt-get install libpcap-dev libpcap0.8-dev
+
+
+#Step 3: 
+cd ~/catkin_ws/src/
+git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+cd ~/catkin_ws && catkin_make
+
+Good reference: 
+https://automaticaddison.com/how-to-launch-the-turtlebot3-simulation-with-ros/
+
+#Step 4: 
+cd  ~/catkin_ws/src/asl_turtlebot/launch
+grep "xacro.py" -rli | xargs sed -i 's/xacro.py/xacro/g'
+
+
+
 # noetic-configure
 
 - `install_noetic_on_ubuntu20.sh` - General purpose script to (1) install ROS Noetic (2) set up the catkin_ws (3) set up asl_turtlebot and turtlebot packages on any Ubuntu 20.04 system. **Best script for student use.** Doesn't communicate with hardware.
@@ -7,3 +32,5 @@
 - `install_noetic_on_genbu.sh` - Everything required to install ROS Noetic on Genbu machines. Unique attributes: uses bashrc.user instead of bashrc, doesn't communicate with hardware.
 
 - `rostb3_noetic.sh` - Required for interfacing with hardware. Sets ROS variables like ROS_MASTER_URI, ROS_IP, and ROS_HOSTNAME to communicate with turtlebot.
+
+
